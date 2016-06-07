@@ -11,10 +11,8 @@ describe('profileView', function() {
       it('should create a `phones` model with 3 phones', inject(function($componentController) {
         var ctrl = $componentController('profileView');
 
-        expect(ctrl.avatar).toBeDefined();
-        expect(ctrl.name).toBeDefined();
-        expect(ctrl.occupation).toBeDefined();
-        expect(ctrl.bio).toBeDefined();
+        expect(ctrl.profiles).toBeDefined();
+        expect(ctrl.active).toBeDefined();
 
       }));
 

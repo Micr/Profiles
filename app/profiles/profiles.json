@@ -1,0 +1,32 @@
+[
+  {
+    "avatar" : "view1/images/man-324103_640.jpg",
+    "name": "Jim Carrey",
+    "occupation" : "Comedian",
+    "bio" : "Lorem ipsum dolor sit amet"
+  },
+  {
+    "avatar" : "view1/images/human-746195_640.jpg",
+    "name": "James Dean",
+    "occupation" : "Actor",
+    "bio" : "Lorem ipsum dolor sit amet"
+  },
+  {
+    "avatar" : "view1/images/man-355612_640.jpg",
+    "name": "Leonardo Di Caprio",
+    "occupation" : "Actor",
+    "bio" : "Lorem ipsum dolor sit amet"
+  },
+  {
+    "avatar" : "view1/images/man-540500_640.jpg",
+    "name": "George Lucas",
+    "occupation" : "Director",
+    "bio" : "Lorem ipsum dolor sit amet"
+  },
+  {
+    "avatar" : "view1/images/man-438140_640.jpg",
+    "name": "Stevie Wonder",
+    "occupation" : "Singer",
+    "bio" : "Lorem ipsum dolor sit amet"
+  }
+]
