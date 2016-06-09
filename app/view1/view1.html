@@ -1,1 +1,4 @@
-<profile-view></profile-view>
+<div class="view_container">
+  <div id="info_container" ng-show="showNotification">New Rating: {{profileRating}} for profile {{profileId}}</div>
+  <profile-view on-update="showUpdate(profileId, profileRating)"></profile-view>
+</div>  

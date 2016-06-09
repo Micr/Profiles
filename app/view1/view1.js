@@ -9,6 +9,17 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', [function() {
-
+.controller('View1Ctrl', ['$scope', '$timeout', function($scope, $timeout) {
+  $scope.showNotification = false;
+  $scope.showUpdate = function (profileId, profileRating) {
+    $scope.profileRating = profileRating;
+    $scope.profileId = profileId;
+    $scope.showNotification = true;
+    setTimer();
+  }
+  function setTimer () {
+    $timeout(function () {
+      $scope.showNotification = false;
+    }, 5000);
+  }
 }]);

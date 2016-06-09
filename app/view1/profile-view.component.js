@@ -2,6 +2,9 @@ angular.
   module('myApp.view1').
   component('profileView', {
     templateUrl: 'view1/profile-view.template.html',
+    bindings: {
+      onUpdate: '&'
+    },
     controller: ['$http', function ProfileViewController ($http) {
       // Profile number
       var counter = 0;
@@ -11,11 +14,19 @@ angular.
         self.profiles = response.data;
         newProfile();
       });
+      /**
+       * Adds a new profile
+       */
       function newProfile() {
-        counter = (++counter % 5);
         self.active = self.profiles[counter];
+        counter = (++counter % 5);
       }
-      this.change = function () {
+      /**
+       * Rating change handler
+       * @param  {number} rating - profile rating
+       */
+      this.change = function (rating) {
+        self.onUpdate({profileId: self.active.id, profileRating: rating});
         newProfile();
       }
     }]

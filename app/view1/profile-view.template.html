@@ -1,13 +1,13 @@
 <div class="profile_view">
-  <ul >
-    <li ng-show="$ctrl.active === profile" ng-repeat="profile in $ctrl.profiles">
+  <ul class="profile_container">
+    <li class="profile ng-hide" ng-show="$ctrl.active === profile" ng-repeat="profile in $ctrl.profiles">
       <img class="avatar" ng-src="{{profile.avatar}}"/>
       <div class="name">{{profile.name}}</div>
       <div class="description">{{profile.occupation}}</div>
       <div class="bio">{{profile.bio}}</div>
     </li>
   </ul>
-  <select class="select" ng-model="rating" ng-change="$ctrl.change()">
+  <select class="select" ng-model="rating" ng-change="$ctrl.change(rating)">
     <option>1</option>
     <option>2</option>
     <option>3</option>

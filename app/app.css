@@ -3,7 +3,7 @@
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
+  margin-bottom: 0;
   padding: 0 0 0.5em;
 }
 
@@ -30,6 +30,19 @@
 }
 
 .avatar {
-  height: 100px;  
+  height: 100px;
   width: 100px;
+}
+
+#info_container {
+  height: 40px;
+  position: absolute;
+  top: 0;
+  line-height: 40px;
+}
+
+.view_container {
+  padding-top: 40px;
+  position: relative;
+  margin-left: 100px;
 }
