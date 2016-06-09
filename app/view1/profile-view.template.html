@@ -7,6 +7,12 @@
       <div class="bio">{{profile.bio}}</div>
     </li>
   </ul>
+  <div class="rating">
+    <i ng-repeat="n in [1,2,3,4,5]"
+  ng-click="$ctrl.setRating(n)"
+    ng-class="{'icon-star-empty': n > $ctrl.lastRating}"
+    class="star icon-large icon-star"></i>
+  </div>
   <select class="select" ng-model="rating" ng-change="$ctrl.change(rating)">
     <option>1</option>
     <option>2</option>

@@ -25,7 +25,8 @@ angular.
        * Rating change handler
        * @param  {number} rating - profile rating
        */
-      this.change = function (rating) {
+      this.setRating = function (rating) {
+        self.lastRating = rating;
         self.onUpdate({profileId: self.active.id, profileRating: rating});
         newProfile();
       }
