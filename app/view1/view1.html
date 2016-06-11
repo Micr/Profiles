@@ -4,5 +4,5 @@
       New Rating: <i ng-repeat="n in [1,2,3,4,5]" ng-click="$ctrl.setRating(n)" ng-mouseover="$ctrl.over=true"
           ng-mouseleave="$ctrl.over=false" ng-class="{'icon-star-empty': n > profileRating }" class="star icon-large icon-star"></i> for profile {{profileId}}</div>
     </div>
-  <profile-view on-update="showUpdate(profileId, profileRating)"></profile-view>
+  <profile on-update="showUpdate(profileId, profileRating)"></profile>
 </div>

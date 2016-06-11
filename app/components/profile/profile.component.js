@@ -1,7 +1,7 @@
 angular.
   module('myApp.view1').
-  component('profileView', {
-    templateUrl: 'view1/profile-view.template.html',
+  component('profile', {
+    templateUrl: 'components/profile/profile.template.html',
     bindings: {
       onUpdate: '&'
     },
@@ -11,7 +11,7 @@ angular.
       // Reference to this object
       var self = this;
       // Gets profiles file from the server
-      $http.get('profiles/profiles.json').then(function (response) {
+      $http.get('profile-list/profiles.json').then(function (response) {
         // user profiles
         self.profiles = response.data;
         newProfile();
