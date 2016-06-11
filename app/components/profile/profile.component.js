@@ -1,11 +1,12 @@
 angular.
-  module('myApp.view1').
-  component('profile', {
+  module('myApp.profile', [])
+  .component('profile', {
     templateUrl: 'components/profile/profile.template.html',
     bindings: {
       onUpdate: '&'
     },
     controller: ['$http', function ProfileViewController ($http) {
+    //
       // Profile number
       var counter = 0;
       // Reference to this object
