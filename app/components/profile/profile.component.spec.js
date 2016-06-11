@@ -1,20 +1,34 @@
 'use strict';
 
-describe('profileView', function() {
+describe('profile component', function() {
 
     // Load the module that contains the `profileView` component before each test
-    beforeEach(module('myApp.view1'));
+    beforeEach(module('myApp.profile'));
 
     // Test the controller
-    describe('ProfileViewController', function() {
+    describe('profile component controller', function() {
+      var ctrl, $httpBackend;
 
-      it('should create a `phones` model with 3 phones', inject(function($componentController) {
-        var ctrl = $componentController('profileView');
-
-        expect(ctrl.profiles).toBeDefined();
-        expect(ctrl.active).toBeDefined();
-
+      beforeEach(inject(function($componentController, _$httpBackend_) {
+        $httpBackend = _$httpBackend_;
+        $httpBackend.expectGET('profile-list/profiles.json')
+                  .respond([{ "id"  : "1", "name": "Jim Carrey"}]);
+        ctrl = $componentController('profile');
       }));
+
+      it('should create a "profiles" property with 2 profiles fetched with $http', function() {
+        expect(ctrl.profiles).toBeUndefined();
+        $httpBackend.flush();
+        expect(ctrl.profiles).toEqual([{ "id"  : "1", "name": "Jim Carrey"}]);
+
+      });
+
+      it('should create an "active" property with 2 profiles fetched with $http', function() {
+        expect(ctrl.profiles).toBeUndefined();
+        $httpBackend.flush();
+        expect(ctrl.active).toEqual({ "id"  : "1", "name": "Jim Carrey" });
+
+      });
 
     });
 
