@@ -36,13 +36,11 @@
 
 #info_container {
   height: 40px;
-  position: absolute;
-  top: 0;
   line-height: 40px;
+  text-align: center;
+  padding: 10px 0;
 }
 
 .view_container {
-  padding-top: 40px;
   position: relative;
-  margin-left: 100px;
 }

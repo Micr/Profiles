@@ -7,18 +7,11 @@
       <div class="bio">{{profile.bio}}</div>
     </li>
   </ul>
-  <div class="rating">
-    <i ng-repeat="n in [1,2,3,4,5]"
-  ng-click="$ctrl.setRating(n)"
-    ng-class="{'icon-star-empty': n > $ctrl.lastRating}"
-    class="star icon-large icon-star"></i>
+<div class="rating-title">
+Rating:
+</div>
+  <div class="rating" ng-mouseleave="$ctrl.over=false">
+    <i ng-repeat="n in [1,2,3,4,5]" ng-click="$ctrl.setRating(n)" ng-mouseover="$ctrl.over=n"
+     ng-class="{'icon-star-empty': !$ctrl.over || n > $ctrl.over}" class="star icon-large icon-star"></i>
   </div>
-  <select class="select" ng-model="rating" ng-change="$ctrl.change(rating)">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-  </select>
-{{rating}}
 </div>

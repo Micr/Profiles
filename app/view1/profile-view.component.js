@@ -8,7 +8,9 @@ angular.
     controller: ['$http', function ProfileViewController ($http) {
       // Profile number
       var counter = 0;
+      // Reference to this object
       var self = this;
+      // Gets profiles file from the server
       $http.get('profiles/profiles.json').then(function (response) {
         // user profiles
         self.profiles = response.data;
