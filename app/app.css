@@ -1,4 +1,5 @@
 /* app css stylesheet */
+@@import "components/rating-history/rating-history.component.css"
 
 .menu {
   list-style: none;
