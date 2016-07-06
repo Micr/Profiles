@@ -1,0 +1,17 @@
+#rating_history_container {
+  width: 354px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#rating_history_title {
+
+}
+
+#rating_history_container ul {
+  height: 314px;
+  overflow: auto;
+  list-style: none;
+  width: 88%;
+}

@@ -1,9 +1,6 @@
-.profile_view {
+#profile_view {
   border: 1px solid gray;
-  position: absolute;
   width: 400px;
-  left: 50%;
-  margin-left: -221px;
   padding: 20px;
 }
 .profile_container {

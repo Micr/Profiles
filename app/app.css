@@ -1,5 +1,11 @@
 /* app css stylesheet */
-@@import "components/rating-history/rating-history.component.css"
+@import "components/rating-history/rating-history.component.css";
+@import "components/profile/profile.component.css";
+
+ul {
+  margin: 0;
+  padding: 0;
+}
 
 .menu {
   list-style: none;
@@ -44,4 +50,9 @@
 
 .view_container {
   position: relative;
+}
+
+#widget_container {
+  display: flex;
+  justify-content: space-around;
 }
