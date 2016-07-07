@@ -5,8 +5,8 @@ angular.
     bindings: {
       onUpdate: '&'
     },
-    controller: ['$http', function ProfileViewController ($http) {
-    //
+    controller: ['$http', function ($http) {
+
       // Profile number
       var counter = 0;
       // Reference to this object
@@ -24,6 +24,12 @@ angular.
         self.active = self.profiles[counter];
         counter = (++counter % 5);
       }
+
+      function saveRating (rating) {
+          $http.post('/ratings/save', rating).then(function () {
+
+          });
+      };
       /**
        * Rating change handler
        * @param  {number} rating - profile rating
@@ -33,5 +39,6 @@ angular.
         self.onUpdate({profileId: self.active.id, profileRating: rating});
         newProfile();
       }
+
     }]
   });
